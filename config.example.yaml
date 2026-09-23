@@ -1,19 +1,21 @@
 # ============================================================
-# CRYPTO BIG-CRASH DETECTOR - CONFIGURATION
-# Edit this file to change behavior without touching the code.
+# CRYPTO BIG-CRASH DETECTOR - CONFIGURATION (EXAMPLE)
+# Copy this file to "config.yaml" and fill in your values.
+#   copy config.example.yaml config.yaml
+# config.yaml is git-ignored so your secrets never reach GitHub.
 # ============================================================
 
 # Coins to monitor (just ticker symbols — Binance pair auto-derived as SYM+USDT)
 coins:
   - BTC
+  - BNB
+  - TAO
   - ETH
   - SOL
-  - BNB
   - LINK
   - LTC
   - SUI
   - APT
-  - TAO
   - FET
 
 # Crash thresholds. A coin alerts when it drops MORE than this %
@@ -32,9 +34,6 @@ check_interval: 30
 # Anti-spam / cooldown per coin.
 cooldown:
   enabled: true
-  # After an alert, the same coin will not alert again until the
-  # price recovers to within this % of the pre-crash price, OR
-  # this many minutes have passed (whichever happens first).
   recovery_percent: 3
   min_minutes_between_alerts: 30
 
@@ -44,7 +43,7 @@ history_retention_minutes: 1500
 
 # Telegram notifications.
 telegram:
-  enabled: true
+  enabled: false
   bot_token: "PASTE_YOUR_BOT_TOKEN_HERE"
   chat_id: "PASTE_YOUR_CHAT_ID_HERE"
 

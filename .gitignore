@@ -23,3 +23,8 @@ Thumbs.db
 _probe.py
 _test_binance.py
 *.log
+
+# Secrets / local config (keep your real config.yaml out of git)
+config.yaml
+*.env
+.env
