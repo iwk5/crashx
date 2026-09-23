@@ -24,9 +24,9 @@ thresholds:
   1m: 5
   5m: 7
   15m: 10
-  1h: 15
-  4h: 20
-  24h: 30
+  1h: 13
+  4h: 17
+  24h: 22
 
 # How often to check prices (seconds). 60 = once per minute (1 API call/min).
 check_interval: 60
