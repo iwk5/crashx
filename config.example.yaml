@@ -28,8 +28,8 @@ thresholds:
   4h: 20
   24h: 30
 
-# How often to check prices (seconds).
-check_interval: 30
+# How often to check prices (seconds). 60 = once per minute (1 API call/min).
+check_interval: 60
 
 # Anti-spam / cooldown per coin.
 cooldown:
