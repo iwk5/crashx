@@ -1,0 +1,54 @@
+# ============================================================
+# CRYPTO BIG-CRASH DETECTOR - CONFIGURATION
+# Edit this file to change behavior without touching the code.
+# ============================================================
+
+# Coins to monitor (just ticker symbols — Binance pair auto-derived as SYM+USDT)
+coins:
+  - BTC
+  - ETH
+  - SOL
+  - BNB
+  - LINK
+  - LTC
+  - SUI
+  - APT
+  - TAO
+  - FET
+
+# Crash thresholds. A coin alerts when it drops MORE than this %
+# within the listed window.
+thresholds:
+  1m: 5
+  5m: 7
+  15m: 10
+  1h: 15
+  4h: 20
+  24h: 30
+
+# How often to check prices (seconds).
+check_interval: 30
+
+# Anti-spam / cooldown per coin.
+cooldown:
+  enabled: true
+  # After an alert, the same coin will not alert again until the
+  # price recovers to within this % of the pre-crash price, OR
+  # this many minutes have passed (whichever happens first).
+  recovery_percent: 3
+  min_minutes_between_alerts: 30
+
+# Rolling history retention (minutes). Keep enough to cover the
+# longest threshold window (24h) plus buffer.
+history_retention_minutes: 1500
+
+# Telegram notifications.
+telegram:
+  enabled: true
+  bot_token: "PASTE_YOUR_BOT_TOKEN_HERE"
+  chat_id: "PASTE_YOUR_CHAT_ID_HERE"
+
+# Dashboard display.
+dashboard:
+  enabled: true
+  title: "CRYPTO CRASH DETECTOR"
